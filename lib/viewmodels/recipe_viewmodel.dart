@@ -4,7 +4,6 @@ import 'package:skyline_template_app/core/enums/view_state.dart';
 import 'package:skyline_template_app/model/Ingredient.dart';
 import 'package:skyline_template_app/core/services/navigation_service.dart';
 import 'package:skyline_template_app/locator.dart';
-import 'package:faker/faker.dart';
 
 class RecipeViewModel extends BaseViewModel {
   final _navigationService = locator<NavigationService>();

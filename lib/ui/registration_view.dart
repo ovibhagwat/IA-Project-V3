@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:skyline_template_app/core/utilities/constants.dart';
 import 'package:skyline_template_app/viewmodels/registration_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 import 'package:skyline_template_app/locator.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class RegistrationView extends StatelessWidget {
   @override
@@ -16,44 +18,47 @@ class RegistrationView extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Container(child: IconButton(icon: Icon(Icons.arrow_back,color: colorSlate,), onPressed: ()=> viewModel.routeToHomeView()),alignment: Alignment.topLeft,),
               SizedBox(
-                height: 100.0,
+                height: 180.0,
               ),
-              Container(child: Image.asset('assets/ApogeeLogo2.png'),),
+              Container(
+                child: Image.asset('assets/ApogeeLogo.png'),
+                width: 320,
+              ),
               SizedBox(
                 height: 20.0,
               ),
               Container(
-                child: Center(child: Text("Apogee Leaders Registration",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25,color: colorSlate),)),
-              ),
+                  padding: const EdgeInsets.fromLTRB(25.0, 0.0, 50.0, 0.0),
+                  child: Text(
+                    "Leaders",
+                    style: GoogleFonts.montserrat(
+                      textStyle: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25,
+                        color: colorSlate,
+                      ),
+                    ),
+                  )),
               SizedBox(
-                height: 50.0,
+                height: 40.0,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40),
                 child: TextField(
-                  textAlign: TextAlign.center,
+                  textAlign: TextAlign.left,
                   keyboardType: TextInputType.emailAddress,
                   onChanged: (value) {
-                    viewModel.setEmailAddress(value);
+                    //Do something with the user input.
                   },
-                  decoration: InputDecoration(filled: true,fillColor: colorSlate,
+                  decoration: InputDecoration(
                     hintText: 'Enter your email',
+                    hintStyle: TextStyle(color: colorSlate),
                     contentPadding:
-                    EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide:
-                      BorderSide(color: colorSkyBlue, width: 1.0),
-                      borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                    ),
+                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                     focusedBorder: OutlineInputBorder(
-                      borderSide:
-                      BorderSide(color: colorSkyBlue, width: 2.0),
-                      borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                      borderSide: BorderSide(color: colorSlate, width: 2.0),
+                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
                     ),
                   ),
                 ),
@@ -64,27 +69,19 @@ class RegistrationView extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 40),
                 child: TextField(
-                  textAlign: TextAlign.center,
+                  textAlign: TextAlign.left,
                   obscureText: true,
                   onChanged: (value) {
-                    viewModel.setPassword(value);
+                    //Do something with the user input.
                   },
-                  decoration: InputDecoration(filled: true,fillColor: colorSlate, focusColor: colorWhite,
+                  decoration: InputDecoration(
                     hintText: 'Enter your password.',
+                    hintStyle: TextStyle(color: colorSlate),
                     contentPadding:
-                    EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide:
-                      BorderSide(color: colorSkyBlue, width: 1.0),
-                      borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                    ),
+                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                     focusedBorder: OutlineInputBorder(
-                      borderSide:
-                      BorderSide(color: colorSkyBlue, width: 2.0),
-                      borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                      borderSide: BorderSide(color: colorSlate, width: 2.0),
+                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
                     ),
                   ),
                 ),
@@ -95,15 +92,14 @@ class RegistrationView extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 2.0),
                 child: Material(
-                  color: colorSkyBlue,
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
+                  color: colorNavy,
+                  borderRadius: BorderRadius.all(Radius.circular(5.0)),
                   elevation: 5.0,
                   child: MaterialButton(
                     onPressed: () {
-                      print(viewModel.email);
-                      print(viewModel.password);
+                      //Implement login functionality.
                     },
-                    minWidth: 330.0,
+                    minWidth: 320.0,
                     height: 42.0,
                     child: Text(
                       'Register',
@@ -111,17 +107,16 @@ class RegistrationView extends StatelessWidget {
                   ),
                 ),
               ),
-              ElevatedButton(
-                onPressed: () {
-                  viewModel.routeToHomeView();
-                },
-                style: ElevatedButton.styleFrom(
-                  primary: colorSkyBlue,
-                ),
-                child: Text(
-                  "Home",
-                  style: TextStyle(color: colorSlate),
-                ),
+              Container(
+                child: IconButton(
+                    icon: Icon(
+                      Icons.arrow_forward,
+                      color: colorSlate,
+                    ),
+                    padding: EdgeInsets.all(50),
+                    onPressed: () => viewModel.routeToHomeView()),
+                alignment: Alignment.topRight,
+
               ),
             ],
             mainAxisSize: MainAxisSize.max,

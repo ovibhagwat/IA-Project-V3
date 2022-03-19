@@ -28,17 +28,19 @@ class LoginView extends StatelessWidget {
                 height: 20.0,
               ),
               Container(
-                child: Center(
-                    child: Text(
-                  "Leaders",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 25,
-                      color: colorSlate),
-                )),
-              ),
+                  padding: const EdgeInsets.fromLTRB(25.0, 0.0, 50.0, 0.0),
+                  child: Text(
+                    "Leaders",
+                    style: GoogleFonts.montserrat(
+                      textStyle: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25,
+                        color: colorSlate,
+                      ),
+                    ),
+                  )),
               SizedBox(
-                height: 50.0,
+                height: 40.0,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40),
@@ -112,11 +114,11 @@ class LoginView extends StatelessWidget {
                   viewModel.routeToRegistrationView();
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: colorSage,
+                  primary: colorNavy,
                 ),
                 child: Text(
                   "New Leader?",
-                  style: TextStyle(color: colorSlate),
+                  style: TextStyle(color: colorWhite),
                 ),
               ),
             ],
