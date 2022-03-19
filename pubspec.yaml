@@ -1,5 +1,5 @@
-name: skyline_template_app
-description: A template for Skyline CS students.
+name: apogee_leaders_app
+description: An app for the leaders of Apogee Adventures.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.

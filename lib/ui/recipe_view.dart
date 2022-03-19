@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:skyline_template_app/viewmodels/recipe_viewmodel.dart';
-import 'package:skyline_template_app/core/utilities/constants.dart';
+import 'package:apogee_leaders_app/viewmodels/recipe_viewmodel.dart';
+import 'package:apogee_leaders_app/core/utilities/constants.dart';
 import 'package:stacked/stacked.dart';
-import 'package:skyline_template_app/locator.dart';
+import 'package:apogee_leaders_app/locator.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class RecipeView extends StatelessWidget {

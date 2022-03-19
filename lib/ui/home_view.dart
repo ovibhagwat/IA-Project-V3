@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:skyline_template_app/core/utilities/constants.dart';
-import 'package:skyline_template_app/viewmodels/home_viewmodel.dart';
-import 'package:skyline_template_app/locator.dart';
+import 'package:apogee_leaders_app/core/utilities/constants.dart';
+import 'package:apogee_leaders_app/viewmodels/home_viewmodel.dart';
+import 'package:apogee_leaders_app/locator.dart';
 import 'package:stacked/stacked.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -113,15 +113,19 @@ class HomeView extends StatelessWidget {
                 style: TextStyle(color: colorSlate),
               ),
             ),
+            SizedBox(
+              height: 25.0,
+            ),
             ElevatedButton(
               onPressed: () {
                 viewModel.routeToRegistrationView();
               },
               style: ElevatedButton.styleFrom(
-                  primary: colorSkyBlue, fixedSize: const Size(350, 80)),
+                primary: colorNavy,
+              ),
               child: Text(
                 "Registration View",
-                style: TextStyle(color: colorSlate),
+                style: TextStyle(color: colorWhite),
               ),
             ),
             ElevatedButton(
@@ -129,12 +133,13 @@ class HomeView extends StatelessWidget {
                 viewModel.routeToLoginView();
               },
               style: ElevatedButton.styleFrom(
-                  primary: colorSkyBlue, fixedSize: const Size(350, 80)),
+                primary: colorNavy,
+              ),
               child: Text(
                 "Login View",
-                style: TextStyle(color: colorSlate),
+                style: TextStyle(color: colorWhite),
               ),
-            )
+            ),
           ],
         ),
       ),

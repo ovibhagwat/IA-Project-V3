@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:skyline_template_app/core/services/navigation_service.dart';
-import 'package:skyline_template_app/core/utilities/router.dart' as router;
-import 'package:skyline_template_app/ui/login_view.dart';
+import 'package:apogee_leaders_app/core/services/navigation_service.dart';
+import 'package:apogee_leaders_app/core/utilities/router.dart' as router;
+import 'package:apogee_leaders_app/ui/login_view.dart';
 import 'locator.dart';
 
 
@@ -9,10 +9,10 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   //await Firebase.initializeApp();
   await setupLocator();
-  runApp(MySkylineApp());
+  runApp(ApogeeLeadersApp());
 }
 
-class MySkylineApp extends StatelessWidget {
+class ApogeeLeadersApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

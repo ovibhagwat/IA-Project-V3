@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:skyline_template_app/ui/home_view.dart';
-import 'package:skyline_template_app/ui/recipe_view.dart';
-import 'package:skyline_template_app/ui/weather_view.dart';
-import 'package:skyline_template_app/ui/map_view.dart';
-import 'package:skyline_template_app/ui/login_view.dart';
-import 'package:skyline_template_app/ui/registration_view.dart';
-import 'package:skyline_template_app/core/utilities/route_names.dart';
+import 'package:apogee_leaders_app/ui/home_view.dart';
+import 'package:apogee_leaders_app/ui/recipe_view.dart';
+import 'package:apogee_leaders_app/ui/weather_view.dart';
+import 'package:apogee_leaders_app/ui/map_view.dart';
+import 'package:apogee_leaders_app/ui/login_view.dart';
+import 'package:apogee_leaders_app/ui/registration_view.dart';
+import 'package:apogee_leaders_app/core/utilities/route_names.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
 /// Class that generates routes for the application
