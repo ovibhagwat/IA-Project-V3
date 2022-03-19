@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "796579331179",
+    "project_id": "ia-apogeeleaders",
+    "storage_bucket": "ia-apogeeleaders.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796579331179:android:59727c8968cf950e9cc52e",
+        "android_client_info": {
+          "package_name": "app.ApogeeAdventures.apogee_leaders_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796579331179-2l3mmfudco2mponfri9igimvokba4auk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBg_gC9GO5E5CL9xGkHHJMgGMguK_3ivRw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "796579331179-2l3mmfudco2mponfri9igimvokba4auk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
