@@ -4,6 +4,7 @@ import 'package:apogee_leaders_app/locator.dart';
 import 'package:apogee_leaders_app/core/services/navigation_service.dart';
 import 'package:apogee_leaders_app/core/utilities/route_names.dart';
 
+
 class HomeViewModel extends BaseViewModel {
   final  _navigationService = locator<NavigationService>();
   bool pageLoaded = true;

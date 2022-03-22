@@ -94,6 +94,7 @@ class RecipeView extends StatelessWidget {
                   ],
                 ),
               ],
+              mainAxisAlignment: MainAxisAlignment.center,
             ),
           ],
           mainAxisSize: MainAxisSize.max,

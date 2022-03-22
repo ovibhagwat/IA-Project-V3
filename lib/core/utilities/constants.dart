@@ -7,3 +7,4 @@ const colorSkyBlue = Color(0xff73a6e0);
 const colorMustard = Color(0xfff6cb43);
 const colorApricot = Color(0xfffab03c);
 const colorSage = Color(0xff849767);
+const colorFog = Color(0xffe6e6e6);

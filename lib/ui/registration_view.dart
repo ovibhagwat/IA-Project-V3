@@ -49,7 +49,53 @@ class RegistrationView extends StatelessWidget {
                   textAlign: TextAlign.left,
                   keyboardType: TextInputType.emailAddress,
                   onChanged: (value) {
-                    //Do something with the user input.
+                    viewModel.setFirstName(value);
+                  },
+                  decoration: InputDecoration(
+                    hintText: 'Enter your first name',
+                    hintStyle: TextStyle(color: colorSlate),
+                    contentPadding:
+                    EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: colorSlate, width: 2.0),
+                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 8.0,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 40),
+                child: TextField(
+                  textAlign: TextAlign.left,
+                  keyboardType: TextInputType.emailAddress,
+                  onChanged: (value) {
+                    viewModel.setLastName(value);
+                  },
+                  decoration: InputDecoration(
+                    hintText: 'Enter your last name',
+                    hintStyle: TextStyle(color: colorSlate),
+                    contentPadding:
+                    EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: colorSlate, width: 2.0),
+                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 8.0,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 40),
+                child: TextField(
+                  textAlign: TextAlign.left,
+                  keyboardType: TextInputType.emailAddress,
+                  onChanged: (value) {
+                    viewModel.setEmailAddress(value);
                   },
                   decoration: InputDecoration(
                     hintText: 'Enter your email',
@@ -72,7 +118,7 @@ class RegistrationView extends StatelessWidget {
                   textAlign: TextAlign.left,
                   obscureText: true,
                   onChanged: (value) {
-                    //Do something with the user input.
+                    viewModel.setPassword(value);
                   },
                   decoration: InputDecoration(
                     hintText: 'Enter your password.',
@@ -97,7 +143,7 @@ class RegistrationView extends StatelessWidget {
                   elevation: 5.0,
                   child: MaterialButton(
                     onPressed: () {
-                      //Implement login functionality.
+                      viewModel.registerUser();
                     },
                     minWidth: 320.0,
                     height: 42.0,
@@ -106,17 +152,6 @@ class RegistrationView extends StatelessWidget {
                     ),
                   ),
                 ),
-              ),
-              Container(
-                child: IconButton(
-                    icon: Icon(
-                      Icons.arrow_forward,
-                      color: colorSlate,
-                    ),
-                    padding: EdgeInsets.all(50),
-                    onPressed: () => viewModel.routeToHomeView()),
-                alignment: Alignment.topRight,
-
               ),
             ],
             mainAxisSize: MainAxisSize.max,

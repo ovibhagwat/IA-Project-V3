@@ -3,11 +3,12 @@ import 'package:apogee_leaders_app/core/services/navigation_service.dart';
 import 'package:apogee_leaders_app/core/utilities/router.dart' as router;
 import 'package:apogee_leaders_app/ui/login_view.dart';
 import 'locator.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  //await Firebase.initializeApp();
+  await Firebase.initializeApp();
   await setupLocator();
   runApp(ApogeeLeadersApp());
 }

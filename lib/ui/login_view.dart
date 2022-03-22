@@ -48,7 +48,7 @@ class LoginView extends StatelessWidget {
                   textAlign: TextAlign.left,
                   keyboardType: TextInputType.emailAddress,
                   onChanged: (value) {
-                    //Do something with the user input.
+                    viewModel.setEmailAddress(value);
                   },
                   decoration: InputDecoration(
                     hintText: 'Enter your email',
@@ -71,7 +71,7 @@ class LoginView extends StatelessWidget {
                   textAlign: TextAlign.left,
                   obscureText: true,
                   onChanged: (value) {
-                    //Do something with the user input.
+                    viewModel.setPassword(value);
                   },
                   decoration: InputDecoration(
                     hintText: 'Enter your password.',
@@ -96,7 +96,7 @@ class LoginView extends StatelessWidget {
                   elevation: 5.0,
                   child: MaterialButton(
                     onPressed: () {
-                      //Implement login functionality.
+                      viewModel.loginUser();
                     },
                     minWidth: 320.0,
                     height: 42.0,
